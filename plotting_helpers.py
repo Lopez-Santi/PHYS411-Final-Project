@@ -43,7 +43,7 @@ def vpd_plt(G, U, t):
             p1, = plt.plot(t, x[:,ind], color = c)
         ind+=1
     # now the master economy
-    c = 'red'
+    c = 'orange'
     ind = 0
     for node in G._node:
         if G._node[node]['name'] == 'Master':
@@ -69,7 +69,7 @@ def vpd_plt(G, U, t):
             p1, = plt.plot(t, v[:,ind], color = c)
         ind+=1
     # now the master economy
-    c = 'red'
+    c = 'orange'
     ind = 0
     for node in G._node:
         if G._node[node]['name'] == 'Master':
@@ -95,7 +95,7 @@ def vpd_plt(G, U, t):
             p1, = plt.plot(x[:,ind], v[:,ind], color = c)
         ind+=1
     # now the master economy
-    c = 'red'
+    c = 'orange'
     ind = 0
     for node in G._node:
         if G._node[node]['name'] == 'Master':
@@ -159,14 +159,14 @@ def vpd_plt_deluxe(G, U, t):
         # add coupling only if we are not the master (master evolves normally)       
         if G._node[i]['name'] == 'Master':
             for gloop in range(linksz):
-                c = 'green'
+                c = 'forestgreen'
                 cindex = G._node[i]['link'][gloop]
                 indx = G._node[cindex]['index']
                 p2, = plt.plot(t, x[:,indx], color = c) # add the lines for all nodes directly connected to master
         ind += 1
 
     # now the master economy
-    c = 'red'
+    c = 'orange'
     ind = 0
     for node in G._node:
         if G._node[node]['name'] == 'Master':
@@ -206,14 +206,14 @@ def vpd_plt_deluxe(G, U, t):
         # add coupling only if we are not the master (master evolves normally)       
         if G._node[i]['name'] == 'Master':
             for gloop in range(linksz):
-                c = 'green'
+                c = 'forestgreen'
                 cindex = G._node[i]['link'][gloop]
                 indx = G._node[cindex]['index']
                 p2, = plt.plot(t, v[:,indx], color = c) # add the lines for all nodes directly connected to master
         ind += 1
 
     # now the master economy
-    c = 'red'
+    c = 'orange'
     ind = 0
     for node in G._node:
         if G._node[node]['name'] == 'Master':
@@ -253,14 +253,14 @@ def vpd_plt_deluxe(G, U, t):
         # add coupling only if we are not the master (master evolves normally)       
         if G._node[i]['name'] == 'Master':
             for gloop in range(linksz):
-                c = 'green'
+                c = 'forestgreen'
                 cindex = G._node[i]['link'][gloop]
                 indx = G._node[cindex]['index']
                 p2, = plt.plot(x[:,indx], v[:,indx], color = c) # add the lines for all nodes directly connected to master
         ind += 1
 
     # now the master economy
-    c = 'red'
+    c = 'orange'
     ind = 0
     for node in G._node:
         if G._node[node]['name'] == 'Master':
@@ -324,14 +324,14 @@ def ISLM_plt(G, U, t):
         # add coupling only if we are not the master (master evolves normally)       
         if G._node[i]['name'] == 'Master':
             for gloop in range(linksz):
-                c = 'green'
+                c = 'forestgreen'
                 cindex = G._node[i]['link'][gloop]
                 indx = G._node[cindex]['index']
                 p2, = plt.plot(t, r[:,indx], color = c) # add the lines for all nodes directly connected to master
         ind += 1
 
     # now the master economy
-    c = 'red'
+    c = 'orange'
     ind = 0
     for node in G._node:
         if G._node[node]['name'] == 'Master':
@@ -371,14 +371,14 @@ def ISLM_plt(G, U, t):
         # add coupling only if we are not the master (master evolves normally)       
         if G._node[i]['name'] == 'Master':
             for gloop in range(linksz):
-                c = 'green'
+                c = 'forestgreen'
                 cindex = G._node[i]['link'][gloop]
                 indx = G._node[cindex]['index']
                 p2, = plt.plot(t, g[:,indx], color = c) # add the lines for all nodes directly connected to master
         ind += 1
 
     # now the master economy
-    c = 'red'
+    c = 'orange'
     ind = 0
     for node in G._node:
         if G._node[node]['name'] == 'Master':
@@ -418,14 +418,14 @@ def ISLM_plt(G, U, t):
         # add coupling only if we are not the master (master evolves normally)       
         if G._node[i]['name'] == 'Master':
             for gloop in range(linksz):
-                c = 'green'
+                c = 'forestgreen'
                 cindex = G._node[i]['link'][gloop]
                 indx = G._node[cindex]['index']
                 p2, = plt.plot(g[:,indx], r[:,indx], color = c) # add the lines for all nodes directly connected to master
         ind += 1
 
     # now the master economy
-    c = 'red'
+    c = 'orange'
     ind = 0
     for node in G._node:
         if G._node[node]['name'] == 'Master':
@@ -488,14 +488,14 @@ def kaldor_plt(G, U, t):
         # add coupling only if we are not the master (master evolves normally)       
         if G._node[i]['name'] == 'Master':
             for gloop in range(linksz):
-                c = 'green'
+                c = 'forestgreen'
                 cindex = G._node[i]['link'][gloop]
                 indx = G._node[cindex]['index']
                 p2, = plt.plot(t, r[:,indx], color = c) # add the lines for all nodes directly connected to master
         ind += 1
 
     # now the master economy
-    c = 'red'
+    c = 'orange'
     ind = 0
     for node in G._node:
         if G._node[node]['name'] == 'Master':
@@ -535,14 +535,14 @@ def kaldor_plt(G, U, t):
         # add coupling only if we are not the master (master evolves normally)       
         if G._node[i]['name'] == 'Master':
             for gloop in range(linksz):
-                c = 'green'
+                c = 'forestgreen'
                 cindex = G._node[i]['link'][gloop]
                 indx = G._node[cindex]['index']
                 p2, = plt.plot(t, g[:,indx], color = c) # add the lines for all nodes directly connected to master
         ind += 1
 
     # now the master economy
-    c = 'red'
+    c = 'orange'
     ind = 0
     for node in G._node:
         if G._node[node]['name'] == 'Master':
@@ -582,14 +582,14 @@ def kaldor_plt(G, U, t):
         # add coupling only if we are not the master (master evolves normally)       
         if G._node[i]['name'] == 'Master':
             for gloop in range(linksz):
-                c = 'green'
+                c = 'forestgreen'
                 cindex = G._node[i]['link'][gloop]
                 indx = G._node[cindex]['index']
                 p2, = plt.plot(g[:,indx], r[:,indx], color = c) # add the lines for all nodes directly connected to master
         ind += 1
 
     # now the master economy
-    c = 'red'
+    c = 'orange'
     ind = 0
     for node in G._node:
         if G._node[node]['name'] == 'Master':
@@ -662,14 +662,14 @@ def chaos_plt(G, U, t):
         # add coupling only if we are not the master (master evolves normally)       
         if G._node[i]['name'] == 'Master':
             for gloop in range(linksz):
-                c = 'green'
+                c = 'forestgreen'
                 cindex = G._node[i]['link'][gloop]
                 indx = G._node[cindex]['index']
                 p2, = axs[0, 0].plot(t, x[:,indx], color = c) # add the lines for all nodes directly connected to master
         ind += 1
 
     # now the master economy
-    c = 'red'
+    c = 'orange'
     ind = 0
     for node in G._node:
         if G._node[node]['name'] == 'Master':
@@ -702,14 +702,14 @@ def chaos_plt(G, U, t):
         # add coupling only if we are not the master (master evolves normally)       
         if G._node[i]['name'] == 'Master':
             for gloop in range(linksz):
-                c = 'green'
+                c = 'forestgreen'
                 cindex = G._node[i]['link'][gloop]
                 indx = G._node[cindex]['index']
                 p2, = axs[0, 1].plot(t, v[:,indx], color = c) # add the lines for all nodes directly connected to master
         ind += 1
 
     # now the master economy
-    c = 'red'
+    c = 'orange'
     ind = 0
     for node in G._node:
         if G._node[node]['name'] == 'Master':
@@ -743,14 +743,14 @@ def chaos_plt(G, U, t):
         # add coupling only if we are not the master (master evolves normally)       
         if G._node[i]['name'] == 'Master':
             for gloop in range(linksz):
-                c = 'green'
+                c = 'forestgreen'
                 cindex = G._node[i]['link'][gloop]
                 indx = G._node[cindex]['index']
                 p2, = axs[0, 2].plot(t, y[:,indx], color = c) # add the lines for all nodes directly connected to master
         ind += 1
 
     # now the master economy
-    c = 'red'
+    c = 'orange'
     ind = 0
     for node in G._node:
         if G._node[node]['name'] == 'Master':
@@ -787,14 +787,14 @@ def chaos_plt(G, U, t):
         # add coupling only if we are not the master (master evolves normally)       
         if G._node[i]['name'] == 'Master':
             for gloop in range(linksz):
-                c = 'green'
+                c = 'forestgreen'
                 cindex = G._node[i]['link'][gloop]
                 indx = G._node[cindex]['index']
                 p2, = axs[1, 0].plot(v[:,indx], y[:,indx], color = c) # add the lines for all nodes directly connected to master
         ind += 1
 
     # now the master economy
-    c = 'red'
+    c = 'orange'
     ind = 0
     for node in G._node:
         if G._node[node]['name'] == 'Master':
@@ -827,14 +827,14 @@ def chaos_plt(G, U, t):
         # add coupling only if we are not the master (master evolves normally)       
         if G._node[i]['name'] == 'Master':
             for gloop in range(linksz):
-                c = 'green'
+                c = 'forestgreen'
                 cindex = G._node[i]['link'][gloop]
                 indx = G._node[cindex]['index']
                 p2, = axs[1, 1].plot(y[:,indx], x[:,indx], color = c) # add the lines for all nodes directly connected to master
         ind += 1
 
     # now the master economy
-    c = 'red'
+    c = 'orange'
     ind = 0
     for node in G._node:
         if G._node[node]['name'] == 'Master':
@@ -868,14 +868,14 @@ def chaos_plt(G, U, t):
         # add coupling only if we are not the master (master evolves normally)       
         if G._node[i]['name'] == 'Master':
             for gloop in range(linksz):
-                c = 'green'
+                c = 'forestgreen'
                 cindex = G._node[i]['link'][gloop]
                 indx = G._node[cindex]['index']
                 p2, = axs[1, 2].plot(x[:,indx], v[:,indx], color = c) # add the lines for all nodes directly connected to master
         ind += 1
 
     # now the master economy
-    c = 'red'
+    c = 'orange'
     ind = 0
     for node in G._node:
         if G._node[node]['name'] == 'Master':
@@ -932,14 +932,14 @@ def chaos_plt(G, U, t):
         # add coupling only if we are not the master (master evolves normally)       
         if G._node[i]['name'] == 'Master':
             for gloop in range(linksz):
-                c = 'green'
+                c = 'forestgreen'
                 cindex = G._node[i]['link'][gloop]
                 indx = G._node[cindex]['index']
                 p2, = ax.plot(x[:,indx], v[:,indx], y[:,indx], color = c) # add the lines for all nodes directly connected to master
         ind += 1
 
     # now the master economy
-    c = 'red'
+    c = 'orange'
     ind = 0
     for node in G._node:
         if G._node[node]['name'] == 'Master':

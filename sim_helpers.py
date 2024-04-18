@@ -64,11 +64,31 @@ def initialize_sim(num_economies, num_edges):
             labels[ind] = str(ind)
         ind+=1
 
+    # loop over each node and set the various parameters up
+    for loop in G._node:
+        G._node[loop]['index'] = ind
+        G._node[loop]['link'] = list(nx.neighbors(G,loop))
+        G._node[loop]['numlink'] = len(list(nx.neighbors(G,loop)))
     # Draw the network
     plt.figure(figsize=(10,6))
     pos = nx.spring_layout(G)  # Layout for positioning nodes
     nx.draw_networkx_nodes(G, pos, node_color="cornflowerblue")
-    nx.draw_networkx_nodes(G, pos, nodelist=[max_d_node], node_color="red")
+    ind = 0
+    direct_nodes = []
+    # now plotting the satellites directly connected to master
+    for i in G._node:
+        linksz = G._node[i]['numlink'] # check the number of links each node has
+        # add coupling only if we are not the master (master evolves normally)       
+        if G._node[i]['name'] == 'Master':
+            for gloop in range(linksz):
+                c = 'forestgreen'
+                cindex = G._node[i]['link'][gloop]
+                indx = G._node[cindex]['index']
+                direct_nodes.append(cindex)
+        ind += 1
+    
+    nx.draw_networkx_nodes(G, pos, nodelist=direct_nodes, node_color="forestgreen")
+    nx.draw_networkx_nodes(G, pos, nodelist=[max_d_node], node_color="orange")
     nx.draw_networkx_edges(G, pos)
     nx.draw_networkx_labels(G, pos, labels)
 
