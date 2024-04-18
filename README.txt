@@ -4,15 +4,15 @@ Economic Dynamics and Models, Coupled Oscillators, Network/Graph Theory, Stabili
 Project Description:
 My goal in this project will be to explore the behavior of multiple economic systems under a specific
 configuration. I will place a “Master economy” at the center of a scale free network to act as a sort
-of external drive to the rest of the economies who are connected to it (and each other). The charact-
--eristics of each economy will be dictated by using the Kaldor Business Cycle (maybe some type of os-
--cillator (van Der Pol maybe)) model and additional parameters will be utilized to make the model mo-
--re realistic. One specific behavior that I hope to identify is a critical locking radius, where the
+of external drive to the rest of the economies who are connected to it (and each other). The characteristics
+of each economy will be dictated by using the Kaldor Business Cycle (maybe some type of oscillator
+(van Der Pol maybe)) model and additional parameters will be utilized to make the model more realistic.
+One specific behavior that I hope to identify is a critical locking radius, where the
 economies located at a certain distance from the Master economy will stop locking. This distance of
 the radius will depend on the parameters of the Master economy as well as the satellite economies
 around it and I hope to investigate what this dependance is. Some numerical work will be utilized to
-be able to model the system and look for patterns. Then an analytical approach will be used to simp-
--lify the model and try to provide a “back of the envelope” calculation of the behavior.
+be able to model the system and look for patterns. Then an analytical approach will be used to simplify
+the model and try to provide a “back of the envelope” calculation of the behavior.
 
 
 #####
