@@ -24,6 +24,7 @@ Chaotic_econ_network.ipynb - contains an implementation of the chaotic business 
 
 #####
 Resources:
+Main Resource - Introduction to Modern Dynamics (Oxford University Press, D. D. Nolte, 2019) Second Edition
 ODE Solver Guide - https://scipy-cookbook.readthedocs.io/items/idx_ordinary_differential_equations.html
 Chaos Models in Economic - https://arxiv.org/pdf/1001.3492.pdf
 Dynamics of Coupled Van der Pol Oscillators - https://link.springer.com/article/10.1007/s10958-022-05860-6
