@@ -28,3 +28,6 @@ ODE Solver Guide - https://scipy-cookbook.readthedocs.io/items/idx_ordinary_diff
 Chaos Models in Economic - https://arxiv.org/pdf/1001.3492.pdf
 Dynamics of Coupled Van der Pol Oscillators - https://link.springer.com/article/10.1007/s10958-022-05860-6
 Cascading failures in coupled networks: The critical role of node-coupling strength across networks - https://www.nature.com/articles/srep35352
+Solving the Van Der Pol nonlinear diﬀerential equation using ﬁrst order approximation perturbation method - https://www.12000.org/my_notes/vanderpol/vanderpol_perturbation/index.htm
+Van der Pol oscillator - http://www.scholarpedia.org/article/Van_der_Pol_oscillator
+
