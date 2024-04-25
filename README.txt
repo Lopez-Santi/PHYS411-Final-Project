@@ -19,9 +19,12 @@ the model and try to provide a “back of the envelope” calculation of the beh
 sim_helpers.py - contains functions to help with simulating the network and ODE solvers
 plotting_helpers.py - contains functions to help with plotting the dynamics
 
-Simple_econ_network.ipynb - contains an initial run of 3 different (2-D) models for a coupled network of econmies
-Chaotic_econ_network.ipynb - contains an implementation of the chaotic business cycles described in 10.3.4
-order_param_calc.ipynb - contains an implementation of how to calculate the order parameter (normalized amplitude of oscillations) as a function of the coupling strength
+00. Analytical Solution Preliminary (extremely simple - no limit cycles) - contains an intial (very approximate) solution to the van der pol oscillators as damped harmonic oscillators. This was used to understand the physics in this project.
+00a. analytical_test.ipynb - contains a test to see if the approximate solution in 00 was adequet
+01. Analytical solution (approximate - limit cycles) - contains another analytical solution with a limit cycle. The approximation is that the non-linearity is small and we linearize the equations about the fixed point to solve.
+02. Simple_econ_network.ipynb - contains an initial run of 3 different (2-D) models for a coupled network of econmies
+03. order_param_calc.ipynb - contains an implementation of how to calculate the order parameter (normalized amplitude of oscillations) as a function of the coupling strength
+04. Chaotic_econ_network.ipynb - contains an implementation of the chaotic business cycles described in 10.3.4
 
 #####
 Resources:
