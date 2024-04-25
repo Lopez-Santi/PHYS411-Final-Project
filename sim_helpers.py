@@ -200,7 +200,7 @@ def ISLM_model(G, u0, t):
 
 def kaldor_model(G, u0, t):
     """
-    Function will solve the ODE for coupled kaldor buisiness cycle models (with Master oscillator not affected)
+    Function will solve the ODE for coupled kaldor Business cycle models (with Master oscillator not affected)
 
     Arguments:
         G : The graph (networkx) with node having the name 'Master'
@@ -353,7 +353,7 @@ def run_simulation(G, total_time, t_divisions, x0=1, v0=1, g=1, param_perturb = 
         beta : positive rate for real income
 
         ###########
-        Kaldor Buisiness cycle model
+        Kaldor Business cycle model
             Flow: (last term is the coupling to other nodes)
                 v' = -alpha * x + beta * v - c * v^3 + SUM(i)[g * (v - v_i)]
                 x' = -k * x + m tanh(l * v) + SUM(i)[g * (x - x_i)]
@@ -384,6 +384,8 @@ def run_simulation(G, total_time, t_divisions, x0=1, v0=1, g=1, param_perturb = 
         G._node[loop]['coupling'] = np.zeros(shape=(lnk[ind],))
         for linkloop in range (lnk[ind]):
             G._node[loop]['coupling'][linkloop] = g + (random.random() - random.random()) * param_perturb
+            while G._node[loop]['coupling'][linkloop] < 0: # check if this coupling is ok (otherwise this will cause a divergence)
+                G._node[loop]['coupling'][linkloop] = g + (random.random() - random.random()) * param_perturb
         G._node[loop]['mu'] = mu + (random.random() - random.random()) * param_perturb
         G._node[loop]['alpha'] = alpha + (random.random() - random.random()) * param_perturb
         G._node[loop]['beta'] = beta + (random.random() - random.random()) * param_perturb
@@ -434,7 +436,7 @@ def run_simulation(G, total_time, t_divisions, x0=1, v0=1, g=1, param_perturb = 
 
 def chaos_model(G, u0, t):
     """
-    Function will solve the ODE for coupled chaotic buisiness cycle models (with Master oscillator not affected)
+    Function will solve the ODE for coupled chaotic Business cycle models (with Master oscillator not affected)
 
     Arguments:
         G : The graph (networkx) with node having the name 'Master'
@@ -460,7 +462,7 @@ def chaos_model(G, u0, t):
             # v = G._node[i]['v']
             m = G._node[i]['m']
 
-            # origional flow equations (Chaotic Buisiness cycle)
+            # origional flow equations (Chaotic Business cycle)
             # V' = c_3 * B − c_2 * V − c_1 * y
             # B' = r/c_3 * y * ( 1 − y )
             # y' = V
@@ -508,7 +510,7 @@ def run_chaos_simulation(G, total_time, t_divisions, x0=1, v0=1, y0=1, g=1, para
         g : The coupling strength from the Master to other nodes (and base coupling from satellite nodes)
         param_perturb : a small perturbation order added (positive or negative) to each of the parameters (random)
 
-        Chaotic Buisiness cycle model
+        Chaotic Business cycle model
             Flow: (last term is the coupling to other nodes)
                 V' = c_3 * B - c_2 * V - c_1 * y
                 B' = r/c_3 * y * ( 1 - y )

@@ -21,6 +21,7 @@ plotting_helpers.py - contains functions to help with plotting the dynamics
 
 Simple_econ_network.ipynb - contains an initial run of 3 different (2-D) models for a coupled network of econmies
 Chaotic_econ_network.ipynb - contains an implementation of the chaotic business cycles described in 10.3.4
+order_param_calc.ipynb - contains an implementation of how to calculate the order parameter (normalized amplitude of oscillations) as a function of the coupling strength
 
 #####
 Resources:
